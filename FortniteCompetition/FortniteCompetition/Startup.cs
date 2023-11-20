@@ -41,6 +41,12 @@ namespace FortniteCompetition
                 options.UseSqlServer(connectionString);
             });
 
+            services.AddDbContext<CompetitionDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("CompetitionDataContext");
+                options.UseSqlServer(connectionString);
+            });
+
 
             services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<IdentityDataContext>();

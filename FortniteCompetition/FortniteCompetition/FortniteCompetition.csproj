@@ -22,6 +22,9 @@
   <ItemGroup>
     <None Include="Views\Account\Login.cshtml" />
     <None Include="Views\Account\Register.cshtml" />
+    <None Include="Views\Competition\Create.cshtml" />
+    <None Include="Views\Competition\Index.cshtml" />
+    <None Include="Views\Competition\Post.cshtml" />
     <None Include="Views\Contact\index.cshtml" />
     <None Include="Views\Home\index.cshtml" />
     <None Include="Views\News\Create.cshtml" />

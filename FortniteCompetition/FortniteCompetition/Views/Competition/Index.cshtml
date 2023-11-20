@@ -1,0 +1,35 @@
+﻿@model IEnumerable<FortniteCompetition.Models.CompetitionPost>
+@{
+    Layout = "_Layout";
+}
+
+<div class="main-container">
+    <div class="top-content">
+        <h1 class="title-of-page">Recent Fortnite Empire Competition Posts</h1>
+        <a class="create-btn" href="@Url.Action("Create", "Competition")">Create</a>
+    </div>
+
+    <div class="arrows">
+        @if (ViewBag.HasPreviousPage)
+        {
+            <a href="@Url.Action("Index", "Competition" , new { page = ViewBag.PreviousPage })">
+                &lt; Previous
+            </a>
+        }
+
+        @if (ViewBag.HasNextPage)
+        {
+            <a class="next" href="@Url.Action("Index", "Competition" , new { page = ViewBag.NextPage })">
+                Next &gt;
+            </a>
+        }
+      </div>
+
+        <div>
+            @foreach (var post in Model)
+            {
+                @await Html.PartialAsync("_CompetitionPost", post)
+            }
+        </div>
+
+    </div>
