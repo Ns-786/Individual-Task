@@ -1,0 +1,62 @@
+﻿body {
+    background-image: url('../img/bowling.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+li {
+    display: inline;
+}
+.flex-container {
+    display: flex;
+}
+    .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+
+.navbar {
+    background-color: #2250ce;
+    padding: 10px;
+    margin-bottom: 0px !important;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+/* Slide Show */
+
+.mySlides {
+    display: none;
+    height: 350px;
+}
+
+.main-container {
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px !important;
+    margin-bottom: 5px !important;
+}
+
+footer {
+    padding: 15px;
+    background-color: #2250ce;
+    color: #fff;
+}
+
+p {
+    margin: 0px !important;
+    line-height: 2rem;
+}
+
+.w3-content {
+    max-width: 100% !important;
+}

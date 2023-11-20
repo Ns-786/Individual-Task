@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Ten Pen Bowling</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li><a href="#">Member News</a></li>
+                <li><a href="#">Upcoming Competitions</a></li>
+                <li>@Html.ActionLink("Contact us", "Index", "Contact")</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://blog.astirodysseuskos.com/wp-content/uploads/2019/11/bowling.jpg" style="width:100%">
+        <img class="mySlides" src="https://media1.giphy.com/media/xUA7bgjXrufhjRbLgc/200.gif" style="width:100%">
+        <img class="mySlides" src="https://transplant.org.au/wp-content/uploads/2014/12/Ten-Pin-Bowling-1.jpg" style="width:100%">
+        <img class="mySlides" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+
+   @RenderBody()
+
+    <footer>Copyright 2023 Bowling Club</footer>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
