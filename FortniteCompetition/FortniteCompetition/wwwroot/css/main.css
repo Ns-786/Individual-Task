@@ -39,6 +39,7 @@ li {
 
 .main-container {
     background-color: #fff;
+    padding: 15px 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,4 +60,31 @@ p {
 
 .w3-content {
     max-width: 100% !important;
+}
+
+.nav-white {
+    color: #fff;
+}
+
+.logout {
+    padding: 10px;
+}
+
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.main-heading {
+    color: #003cc3;
+}
+
+.main-article {
+    background-color: #fff;
+    padding: 10px;
+}
+
+fieldset {
+    border: none !important;
 }

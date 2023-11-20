@@ -1,0 +1,16 @@
+﻿@model FortniteCompetition.Models.NewsPost
+@inject FortniteCompetition.Models.FormattingService Format
+
+<article class="main-article">
+    <h1 class="main-heading">
+        @Html.ActionLink(Model.Title, "Post", "News",
+            new { year = Model.Posted.Year, month = Model.Posted.Month, key = Model.Key }
+        )
+    </h1>
+    <div class="details">
+        <b>Posted <span>@Format.AsReadableDate(Model.Posted)</span> by <span>@Model.Author</span></b>
+    </div>
+    <div class="content">
+        @Model.Body
+    </div>
+</article>

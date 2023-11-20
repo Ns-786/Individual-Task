@@ -1,0 +1,34 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model FortniteCompetition.Models.NewsPost
+@{
+    Layout = "_Layout";
+}
+<div class="main-container">
+    <h1 class="title-of-page">Create News Post</h1>
+
+    <fieldset>
+
+        <form asp-action="Create" asp-controller="News">
+
+            <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
+
+            <div class="form-item">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" placeholder="News post title" />
+                <span asp-validation-for="Title"></span>
+            </div>
+
+            <div class="form-item">
+                <label asp-for="Body"></label>
+                <textarea asp-for="Body" class="form-control " placeholder="News post content"></textarea>
+                <span asp-validation-for="Body"></span>
+            </div>
+
+                <p>
+                    <button type="submit">Create Post</button>
+                </p>
+
+</form>
+
+    </fieldset>
+</div>

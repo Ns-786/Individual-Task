@@ -3,10 +3,10 @@
 @{
     Layout = "_Layout";
 }
-<div class="f-main-container">
+<div class="main-container">
     <fieldset class="account">
 
-        <h1 class="lr-heading">Memebers Account Login</h1>
+        <h1 class="lr-heading">Memeber Login</h1>
         <br />
         <form role="form" asp-action="Login">
 
@@ -35,10 +35,10 @@
                 <input type="checkbox" asp-for="RememberMe" />
                 <span asp-validation-for="RememberMe" class="field-validation-error"></span>
             </div>
-            <div class="center-content">
-                <label>&nbsp;</label>
-                <button type="submit" class="btn btn-user">Login to account</button>
-            </div>
+            
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-user">Login</button>
+
 
         </form>
 
