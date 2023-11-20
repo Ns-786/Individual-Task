@@ -1,0 +1,53 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model FortniteCompetition.Models.Account.LoginViewModel
+@{
+    Layout = "_Layout";
+}
+<div class="f-main-container">
+    <fieldset class="account">
+
+        <h1 class="lr-heading">Memebers Account Login</h1>
+        <br />
+        <form role="form" asp-action="Login">
+
+            <div asp-validation-summary="All" class="input-validation-error"></div>
+
+            <div class="form-group">
+                <label asp-for="EmailAddress"></label>
+                <input type="email" asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RememberMe"></label>
+                <input type="checkbox" asp-for="RememberMe" />
+                <span asp-validation-for="RememberMe" class="field-validation-error"></span>
+            </div>
+            <div class="center-content">
+                <label>&nbsp;</label>
+                <button type="submit" class="btn btn-user">Login to account</button>
+            </div>
+
+        </form>
+
+        <br />
+
+        <div class="form-group">
+            <label>Not Registered?</label>
+            <a asp-action="Register">Create a new account</a>
+        </div>
+
+    </fieldset>
+</div>

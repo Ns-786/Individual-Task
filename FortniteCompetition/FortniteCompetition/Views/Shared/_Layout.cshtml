@@ -23,8 +23,26 @@
                 <li>@Html.ActionLink("Contact us", "Index", "Contact")</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        <form id="logout" action="@Url.Action("Logout", "Account")" method="POST">
+
+                            <br /><span class="nav-white">@User.Identity.Name</span>
+
+                            <a class="nav-white logout" href="javascript: $('#logout').submit()">
+                                Logout
+                            </a>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <li><a href="@Url.Action("Register", "Account")" title="log in">Register</a></li>
+                    <li><a href="@Url.Action("Login", "Account")" title="log in">Login</a></li>
+                }
+
             </ul>
         </div>
     </nav>
