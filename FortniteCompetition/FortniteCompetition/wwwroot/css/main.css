@@ -88,3 +88,6 @@ p {
 fieldset {
     border: none !important;
 }
+.main-container {
+    text-decoration-color: #fff
+}
